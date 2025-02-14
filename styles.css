@@ -1,3 +1,9 @@
+body {
+  background-color: rgb(108, 22, 22);
+  display: flex;
+  justify-content: center;
+}
+
 .square {
   background-color: rgb(154, 169, 154);
   width: 32px;
