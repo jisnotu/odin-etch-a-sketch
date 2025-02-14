@@ -1,6 +1,5 @@
 .square {
   background-color: rgb(154, 169, 154);
-  outline: black 1px solid;
   width: 32px;
   height: 32px;
 }
