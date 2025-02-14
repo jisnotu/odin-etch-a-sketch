@@ -1,7 +1,5 @@
 body {
   background-color: rgb(108, 22, 22);
-  display: flex;
-  justify-content: center;
 }
 
 .square {
