@@ -13,3 +13,10 @@ container.addEventListener("mouseover", (e) => {
     target.classList.add("hovered");
   };
 });
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+  let numSquares = prompt("Enter number of squares for each dimension.", 16);
+  console.log(numSquares);
+});
