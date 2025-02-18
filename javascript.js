@@ -21,7 +21,9 @@ button.addEventListener("click", () => {
   console.log(numSquares);
 });
 
-function deleteGrid(grid) {
-  const body = document.querySelector("body");
-  body.removeChild(grid);
+function deleteGrid(gridContainer) {
+  const squareList = document.querySelectorAll(".square");
+  for (const square of squareList) {
+    gridContainer.removeChild(square);
+  }
 }
