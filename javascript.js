@@ -20,3 +20,8 @@ button.addEventListener("click", () => {
   let numSquares = prompt("Enter number of squares for each dimension.", 16);
   console.log(numSquares);
 });
+
+function deleteGrid(grid) {
+  const body = document.querySelector("body");
+  body.removeChild(grid);
+}
