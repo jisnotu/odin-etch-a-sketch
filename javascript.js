@@ -1,10 +1,7 @@
 const container = document.querySelector(".container");
+const CONT_WIDTH = 512;
 
-for (let i = 0; i < (16 * 16); i++) {
-  const square = document.createElement("div");
-  square.classList.toggle("square");
-  container.appendChild(square);
-}
+createGrid(container, 16);
 
 container.addEventListener("mouseover", (e) => {
   let target = e.target;
@@ -25,5 +22,17 @@ function deleteGrid(gridContainer) {
   const squareList = document.querySelectorAll(".square");
   for (const square of squareList) {
     gridContainer.removeChild(square);
+  }
+}
+
+function createGrid(gridContainer, numSquares) {
+  const squareWidth = CONT_WIDTH / numSquares;
+  const totalSquares = numSquares * numSquares;
+
+  for (let i = 0; i < totalSquares; i++) {
+    const square = document.createElement("div");
+    square.classList.toggle("square");
+    square.style.cssText = `width: ${squareWidth}px; height: ${squareWidth}px;`
+    gridContainer.appendChild(square);
   }
 }
