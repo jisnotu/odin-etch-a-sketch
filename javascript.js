@@ -14,8 +14,13 @@ container.addEventListener("mouseover", (e) => {
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
-  let numSquares = prompt("Enter number of squares for each dimension.", 16);
-  console.log(numSquares);
+  let numSquares = prompt("Enter number of squares for each dimension (max. 100).", 16);
+  // Limit number of squares to 100 to avoid performance issues.
+  if (numSquares > 100) {
+    numSquares = 100;
+  }
+  deleteGrid(container);
+  createGrid(container, numSquares);
 });
 
 function deleteGrid(gridContainer) {
